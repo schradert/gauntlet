@@ -1261,6 +1261,7 @@ fn update(state: &mut AppModel, message: AppMsg) -> Task<AppMsg> {
 
             client_context.focus_search_bar(widget_id)
         }
+        #[cfg(target_os = "linux")]
         AppMsg::WaylandCloseWindow(_) | AppMsg::WaylandOpenWindow(_, _) => {
             panic!("called in layer shell")
         }
