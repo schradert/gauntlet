@@ -131,7 +131,7 @@ pub struct GauntletComplexTheme {
 
 impl Default for GauntletComplexTheme {
     fn default() -> Self {
-        unreachable!()
+        panic!("should not be called")
     }
 }
 
@@ -1007,5 +1007,17 @@ impl DefaultStyle for GauntletComplexTheme {
     }
 }
 
+
+#[cfg(target_os = "linux")]
+impl iced_layershell::DefaultStyle for GauntletComplexTheme {
+    fn default_style(&self) -> iced_layershell::Appearance {
+        let theme = get_theme();
+
+        iced_layershell::Appearance {
+            background_color: Color::TRANSPARENT,
+            text_color: theme.text.to_iced(),
+        }
+    }
+}
 
 

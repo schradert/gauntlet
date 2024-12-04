@@ -24,6 +24,8 @@ iced_aw = { git = "https://github.com/project-gauntlet/iced_aw.git", branch = "g
 iced_table =  { git = "https://github.com/project-gauntlet/iced_table.git", branch = "gauntlet-0.13" }
 #iced_fonts = { version = "0.1.1", features = ["bootstrap"] }
 iced_fonts =  { git = "https://github.com/project-gauntlet/iced_fonts.git", branch = "gauntlet-0.13", features = ["bootstrap"] }
+#iced_layershell = "0.11.99"
+iced_layershell =  { git = "https://github.com/project-gauntlet/exwlshelleventloop.git", branch = "gauntlet-0.13" }
 
 [dependencies]
 cli = { path = "rust/cli" }
